@@ -67,7 +67,7 @@ const Services15 = () => {
   };
 
   return (
-    <section className="py-16 px-4 md:py-32 md:px-6">
+    <section className="py-16 px-4 md:py-32 md:px-6 overflow-hidden">
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
         <div className="mb-16 max-w-2xl">
           <h2 className="text-foreground mb-4 text-4xl font-medium md:text-6xl">

@@ -87,7 +87,7 @@ const Navbar14 = () => {
   return (
     <section
       className={cn(
-        "border-border border-b lg:border-b",
+        "border-border border-b lg:border-b overflow-hidden",
         isOpen && "border-b-0",
       )}
     >

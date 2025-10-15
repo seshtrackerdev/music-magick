@@ -2,7 +2,7 @@ import { AspectRatio } from "~/components/ui/aspect-ratio";
 
 const Hero178 = () => {
   return (
-    <section className="border-muted bg-background relative border-b pt-10">
+    <section className="border-muted bg-background relative border-b pt-10 overflow-hidden">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-2 md:gap-4 lg:grid-cols-2">
           <div className="flex w-full max-w-[31.25rem] flex-col gap-9 lg:max-w-[37.5rem] lg:py-[20%] xl:py-[26%]">
@@ -20,7 +20,7 @@ const Hero178 = () => {
             </p>
           </div>
           <div>
-            <div className="relative ml-8 aspect-square w-full max-w-[56.25rem] overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:w-1/2">
+            <div className="relative ml-0 md:ml-8 aspect-square w-full max-w-[56.25rem] overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:w-1/2">
               <div className="absolute bottom-0 right-0 w-[85%] overflow-hidden rounded-lg">
                 <AspectRatio ratio={0.918918919 / 1}>
                   <img
