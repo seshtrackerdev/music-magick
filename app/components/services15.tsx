@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router";
 
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
@@ -17,37 +18,37 @@ const catalog: ServiceProps[] = [
   {
     title: "CDs & Music",
     image: "/images/storeshelves1.webp",
-    url: "",
+    url: "/catalog/cds",
     height: "tall",
   },
   {
     title: "DVDs & Movies",
     image: "/images/storefloor2.webp",
-    url: "",
+    url: "/catalog/dvds",
     height: "medium",
   },
   {
     title: "Blu-rays",
     image: "/images/storefloor3.webp",
-    url: "",
+    url: "/catalog/blu-rays",
     height: "short",
   },
   {
     title: "Video Games",
     image: "/images/storefloor4.webp",
-    url: "",
+    url: "/catalog/games",
     height: "tall",
   },
   {
     title: "Vinyl Records",
     image: "/images/storefloor5.webp",
-    url: "",
+    url: "/catalog/vinyl",
     height: "tall",
   },
   {
     title: "TV Shows & Series",
     image: "/images/storefloor6.webp",
-    url: "",
+    url: "/catalog/tv-shows",
     height: "medium",
   },
 ];
@@ -82,12 +83,12 @@ const Services15 = () => {
         {/* Masonry Layout using CSS Columns */}
         <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
           {catalog.map((item, idx) => (
-            <motion.a
+            <motion.div
               key={idx}
-              href={item.url}
               whileHover={{ y: -4 }}
               className="group mb-6 block break-inside-avoid overflow-hidden rounded-xl"
             >
+              <Link to={item.url}>
               <Card
                 className={`relative ${getHeightClass(item.height)} overflow-hidden p-0`}
               >
@@ -105,14 +106,17 @@ const Services15 = () => {
                 </CardContent>
                 <ArrowUpRight className="absolute right-6 top-6 h-6 w-6 text-white drop-shadow-lg transition-all duration-300 group-hover:rotate-45" />
               </Card>
-            </motion.a>
+              </Link>
+            </motion.div>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <Button variant="outline" className="mx-auto">
-            Browse all categories <ArrowUpRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link to="/catalog">
+            <Button variant="outline" className="mx-auto">
+              Browse all categories <ArrowUpRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

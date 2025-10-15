@@ -14,6 +14,7 @@ import {
   Mail,
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router";
 
 import { cn } from "~/lib/utils";
 
@@ -40,21 +41,37 @@ const products = [
     title: "CDs & Music",
     description: "Over 50,000 CDs of all genres",
     icon: Music,
+    url: "/catalog/cds",
   },
   {
     title: "DVDs & Movies",
     description: "30,000+ DVDs including horror, drama, action",
     icon: Film,
+    url: "/catalog/dvds",
   },
   {
     title: "Blu-ray Collection",
     description: "High-quality Blu-ray with enhanced sound",
     icon: Disc3,
+    url: "/catalog/blu-rays",
   },
   {
     title: "Video Games",
     description: "Games for all platforms and generations",
     icon: Gamepad2,
+    url: "/catalog/games",
+  },
+  {
+    title: "Vinyl Records",
+    description: "Vinyl records for the ultimate analog experience",
+    icon: Music,
+    url: "/catalog/vinyl",
+  },
+  {
+    title: "TV Shows & Series",
+    description: "Complete series and season box sets",
+    icon: Film,
+    url: "/catalog/tv-shows",
   },
 ];
 
@@ -114,20 +131,25 @@ const Navbar14 = () => {
                           {products.map((product) => (
                             <NavigationMenuLink
                               key={product.title}
-                              className="group flex cursor-pointer flex-row gap-3"
+                              asChild
                             >
-                              <span className="border-border bg-background flex size-10 shrink-0 items-center justify-center rounded-md border">
-                                <product.icon className="size-5!" />
-                              </span>
-                              <div className="flex flex-col">
-                                <span className="flex items-center gap-0.5 whitespace-nowrap text-sm font-medium">
-                                  {product.title}
-                                  <ChevronRight className="text-primary! size-4 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100" />
+                              <Link
+                                to={product.url}
+                                className="group flex cursor-pointer flex-row gap-3"
+                              >
+                                <span className="border-border bg-background flex size-10 shrink-0 items-center justify-center rounded-md border">
+                                  <product.icon className="size-5!" />
                                 </span>
-                                <p className="text-muted-foreground whitespace-nowrap text-xs">
-                                  {product.description}
-                                </p>
-                              </div>
+                                <div className="flex flex-col">
+                                  <span className="flex items-center gap-0.5 whitespace-nowrap text-sm font-medium">
+                                    {product.title}
+                                    <ChevronRight className="text-primary! size-4 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100" />
+                                  </span>
+                                  <p className="text-muted-foreground whitespace-nowrap text-xs">
+                                    {product.description}
+                                  </p>
+                                </div>
+                              </Link>
                             </NavigationMenuLink>
                           ))}
                         </div>
@@ -146,11 +168,13 @@ const Navbar14 = () => {
                                 Store Hours
                               </span>
                             </NavigationMenuLink>
-                            <NavigationMenuLink className="flex cursor-pointer flex-row items-center gap-3">
-                              <MapPin className="size-4!" />
-                              <span className="whitespace-nowrap text-sm font-medium">
-                                Visit Our Store
-                              </span>
+                            <NavigationMenuLink asChild>
+                              <Link to="/catalog" className="flex cursor-pointer flex-row items-center gap-3">
+                                <MapPin className="size-4!" />
+                                <span className="whitespace-nowrap text-sm font-medium">
+                                  Browse All Categories
+                                </span>
+                              </Link>
                             </NavigationMenuLink>
                           </div>
                           <p className="text-muted-foreground mb-3 mt-5 text-[10px] uppercase">
@@ -236,7 +260,7 @@ const Navbar14 = () => {
                       asChild
                       className={navigationMenuTriggerStyle()}
                     >
-                      <a href="#about">About</a>
+                      <Link to="/about">About</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 </NavigationMenuList>
@@ -273,9 +297,9 @@ const Navbar14 = () => {
                       </p>
                       <div className="space-y-5">
                         {products.map((product) => (
-                          <a
+                          <Link
                             key={product.title}
-                            href="#"
+                            to={product.url}
                             className="group flex cursor-pointer flex-row gap-3 rounded-md transition-colors"
                             onClick={() => setIsOpen(false)}
                           >
@@ -290,7 +314,7 @@ const Navbar14 = () => {
                                 {product.description}
                               </p>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -310,16 +334,16 @@ const Navbar14 = () => {
                             Store Hours
                           </span>
                         </a>
-                        <a
-                          href="#"
+                        <Link
+                          to="/catalog"
                           className="flex cursor-pointer flex-row items-center gap-3 rounded-md transition-colors"
                           onClick={() => setIsOpen(false)}
                         >
                           <MapPin className="size-4" />
                           <span className="text-sm font-medium">
-                            Visit Our Store
+                            Browse All Categories
                           </span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -393,13 +417,13 @@ const Navbar14 = () => {
             </Accordion>
 
             <div className="space-y-2">
-              <a
-                href="#about"
+              <Link
+                to="/about"
                 className="border-border block border-b py-4 pr-3 text-base font-medium transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 About
-              </a>
+              </Link>
             </div>
           </div>
         </div>
