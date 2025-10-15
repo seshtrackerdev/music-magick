@@ -1,10 +1,13 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Navbar14 } from "../components/navbar14";
+import { Hero178 } from "../components/hero178";
+import { About10 } from "../components/about10";
+import { Catalog15 } from "../components/services15";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Music Magick - Warwick, RI | Multi-Media Store" },
+    { name: "description", content: "The ultimate Multi-Media store in Warwick, RI. Over 50,000 CDs, 30,000 DVDs, Blu-rays, and games. Most items just $2!" },
   ];
 }
 
@@ -13,5 +16,12 @@ export function loader({ context }: Route.LoaderArgs) {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+  return (
+    <div className="min-h-screen">
+      <Navbar14 />
+      <Hero178 />
+      <About10 />
+      <Catalog15 />
+    </div>
+  );
 }
