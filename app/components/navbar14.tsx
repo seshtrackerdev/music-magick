@@ -87,7 +87,7 @@ const Navbar14 = () => {
   return (
     <section
       className={cn(
-        "border-border border-b lg:border-b overflow-hidden",
+        "border-border border-b lg:border-b relative z-50",
         isOpen && "border-b-0",
       )}
     >
@@ -105,7 +105,7 @@ const Navbar14 = () => {
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                    <NavigationMenuContent className="p-0">
+                    <NavigationMenuContent className="p-0 z-50">
                       <div className="flex">
                         <div className="p-4">
                           <p className="text-muted-foreground mb-3 text-[10px] uppercase">
@@ -179,7 +179,7 @@ const Navbar14 = () => {
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Store Info</NavigationMenuTrigger>
-                    <NavigationMenuContent className="p-0">
+                    <NavigationMenuContent className="p-0 z-50">
                       <div className="flex">
                         <div className="p-4">
                           <p className="text-muted-foreground mb-3 text-[10px] uppercase">

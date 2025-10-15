@@ -20,7 +20,7 @@ const Hero178 = () => {
             </p>
           </div>
           <div>
-            <div className="relative ml-0 md:ml-8 aspect-square w-full max-w-[56.25rem] overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:w-1/2">
+            <div className="relative ml-4 sm:ml-8 aspect-square w-full max-w-[56.25rem] overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:w-1/2">
               <div className="absolute bottom-0 right-0 w-[85%] overflow-hidden rounded-lg">
                 <AspectRatio ratio={0.918918919 / 1}>
                   <img

@@ -18,7 +18,7 @@ const profile = {
 
 const About10 = () => {
   return (
-    <section className="py-16 px-4 md:py-32 md:px-6 overflow-hidden">
+    <section className="py-16 px-4 md:py-32 md:px-6">
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
         <div className="flex flex-col-reverse gap-5 md:flex-row md:gap-12">
           <div className="w-full md:w-1/3 md:pr-4">
