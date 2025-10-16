@@ -1,5 +1,6 @@
 import type { Route } from "./+types/about";
 import { Navbar14 } from "../components/navbar14";
+import { Footer12 } from "../components/footer12";
 import { Link } from "react-router";
 import { ArrowUpRight, MapPin, Clock, Phone, Mail, Music, Users, Heart, Award } from "lucide-react";
 import { Button } from "~/components/ui/button";
@@ -355,6 +356,7 @@ export default function About({ loaderData }: Route.ComponentProps) {
           </div>
         </section>
       </div>
+      <Footer12 />
     </div>
   );
 }

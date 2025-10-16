@@ -1,6 +1,7 @@
 import type { Route } from "./+types/catalog";
 // import { CatalogLayout } from "../components/catalog-layout";
 import { Navbar14 } from "../components/navbar14";
+import { Footer12 } from "../components/footer12";
 import { Link } from "react-router";
 // import { motion } from "framer-motion";
 import { ArrowUpRight, Music, Disc3, Film, Gamepad2, MapPin, Clock, Phone } from "lucide-react";
@@ -232,6 +233,7 @@ export default function Catalog({ loaderData }: Route.ComponentProps) {
           </div>
         </section>
       </div>
+      <Footer12 />
     </div>
   );
 }
