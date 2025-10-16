@@ -4,6 +4,7 @@ import { Hero178 } from "../components/hero178";
 import { About10 } from "../components/about10";
 import { Catalog15 } from "../components/services15";
 import { BuyingCTA } from "../components/buying-cta";
+import { Cta20 } from "../components/cta20";
 import { Footer12 } from "../components/footer12";
 
 export function meta({}: Route.MetaArgs) {
@@ -25,6 +26,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       <About10 />
       <Catalog15 />
       <BuyingCTA />
+      <Cta20 />
       <Footer12 />
     </div>
   );
