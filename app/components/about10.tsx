@@ -26,9 +26,9 @@ const About10 = () => {
               <div className="mb-8">
                 <div className="mb-6 flex items-center gap-4">
                   <img
-                    src="/images/storeentrance.webp"
-                    alt="Music Magick Store Entrance"
-                    className="h-16 w-16 rounded-lg object-cover"
+                    src="/images/logo.png"
+                    alt="Music Magick"
+                    className="h-16 w-auto"
                   />
                   <div>
                     <h3 className="font-semibold">{profile.title}</h3>

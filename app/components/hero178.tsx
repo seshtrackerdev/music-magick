@@ -9,11 +9,13 @@ const Hero178 = () => {
             <p className="text-muted-foreground font-mono text-[clamp(0.875rem,0.875vw,1rem)]">
               Warwick, Rhode Island
             </p>
-            <h1 className="font-bebas_neue text-foreground text-[clamp(3.5rem,calc(6.5vw+2.3rem),9.5rem)] leading-[0.85] tracking-[-0.03em]">
-              Music
-              <br />
-              Magick
-            </h1>
+            <div className="mb-6">
+              <img
+                src="/images/logo.png"
+                alt="Music Magick"
+                className="h-24 w-auto md:h-32 lg:h-40"
+              />
+            </div>
             <p className="text-muted-foreground text-[clamp(1.125rem,1.125vw,1.4rem)] leading-normal">
               The ultimate Multi-Media store in Rhode Island. Discover over 50,000 CDs, 
               30,000 DVDs, Blu-rays, and games. Most items priced at just $2!

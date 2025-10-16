@@ -111,11 +111,12 @@ const Navbar14 = () => {
       <div className="container px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center gap-9">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                <Music className="h-5 w-5" />
-              </div>
-              <span className="text-lg font-semibold">Music Magick</span>
+            <Link to="/" className="flex items-center">
+              <img
+                src="/images/logo.png"
+                alt="Music Magick"
+                className="h-10 w-auto"
+              />
             </Link>
             <div className="hidden items-center gap-1.5 lg:flex">
               <NavigationMenu delayDuration={0}>

@@ -57,10 +57,14 @@ const Footer12 = () => {
         </ul>
       </nav>
       <div className="mt-10 md:mt-14 lg:mt-20 text-center">
-        <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold text-muted-foreground/20 select-none">
-          Music Magick
-        </h2>
-        <p className="text-muted-foreground text-sm mt-4">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/images/logo.png"
+            alt="Music Magick"
+            className="h-16 w-auto md:h-20 lg:h-24 opacity-20"
+          />
+        </div>
+        <p className="text-muted-foreground text-sm">
           Designed by <a href="https://websites-by-tim.com" className="hover:text-foreground transition-colors">Websites by Tim</a>
         </p>
       </div>
